@@ -1,0 +1,53 @@
+<!-- pages/judge/judge.wxml -->
+<view class="container">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <ruleMask bind:parentReceive="parentCallBack" txt="游戏规则:规定时间内判断对错。对的越多，成绩越高。"></ruleMask>
+    <view class="title" wx:key="i">
+        <p>{{gameName}}</p>
+        <image mode="widthFix" src="{{imagesUrl}}/img/judge/icon-title.png" />
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game" wx:if="{{pageShow == 'game'}}">
+        <view class="card">
+            <image mode="widthFix" src="{{imagesUrl}}/img/judge/bg-card.png" />
+            <view class="topic">第{{num}}/{{numTotal}}题</view>
+            <view class="txt">
+                {{txt}}
+            </view>
+            <view class="judeg" wx:if="{{wancheng == true}}">
+                <view class="radio-box" wx:for="{{radios}}" wx:key="key">
+                   <p> {{item.label}}</p>
+                    <lebel class="radio {{ index==is ? 'on' : ''}}" data-index='{{index}}' data-value='{{item.value}}' bindtap="check"></lebel>
+                </view>
+            </view>
+            <view class="red-btn" wx:if="{{wancheng == true}}" bindtap='subAnwser'data-flage="true">提交答案</view>
+        </view>
+    </view>
+    <!-- 游戏结束 -->
+    <view class="over" wx:elif="{{pageShow == 'over'}}">
+        <view class="grade">
+            <image src="{{imagesUrl}}/img/public/bg-rule.png" />
+            <view class="titles">本轮得分</view>
+            <view class="score">{{score}}</view>
+            <view class="titles" style="margin:0 auto;">您答对了{{score/2}}道题</view>
+            <view class="gameType">
+                <text>正确答案</text>
+                <view class="list" wx:for="{{daan}}" wx:key="i">
+                    <text>{{index+1}}</text>
+                    <text>{{item.answer==1?'✓':'✗'}}</text>
+                </view>
+            </view>
+            <view class="btn">
+                <button open-type="share">分享</button>
+                <button bindtap="starGame">下一关</button>
+            </view>
+        </view>
+    </view>
+    <view class="sub" bindtap="sub">提交</view>
+    <!-- <view class="s">{{s}}</view> -->
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

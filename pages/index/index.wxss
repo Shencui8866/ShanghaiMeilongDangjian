@@ -1,0 +1,33 @@
+/**index.wxss**/
+.center {
+  position: absolute;
+  right: 18rpx;
+  top: 20rpx;
+  width: 172rpx;
+  height: 45rpx;
+  background-image: linear-gradient(#fe1701, #fe1701), linear-gradient(#938bc3, #938bc3);
+  font-family: "siyuanM";
+  text-align: center;
+  font-size: 33rpx;
+  color: #fefefe;
+  border-radius: 25rpx;
+}
+.userinfo {
+  position: absolute; 
+  left: 50%;
+  transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+  bottom: 80rpx;
+}
+.userinfo button {
+  margin-top: 44rpx;
+  width: 264rpx;
+  height: 62rpx;
+  background-image: linear-gradient(#fd1701, #fd1701), linear-gradient(#938bc3, #938bc3);
+  font-family: "ruizi";
+  font-size: 40rpx;
+  letter-spacing: 3rpx;
+  color: #ffffff;
+  border-radius: 50rpx;
+  /* display: inline-block; */
+  line-height:normal;
+}

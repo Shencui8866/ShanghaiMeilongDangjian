@@ -1,0 +1,48 @@
+<!-- pages/connection/connection.wxml -->
+<view class="container">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <ruleMask bind:parentReceive="parentCallBack" txt="选择与图片相应的名称，进连线规定时间内对的越多，成绩越高。"></ruleMask>
+    <view class="title">
+        <p>{{gameName}}</p>
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game" wx:if="{{pageShow == 'game'}}">
+        <view class="imgBox">
+            <image wx:for="{{gameInfo}}" wx:key="a" style="border:{{item.border==true?'5rpx solid #fe1801':'5rpx solid transparent'}}"  src="{{item.link_pic}}" bindtap="con" data-num="{{index}}" data-id="{{item.id}}"/>
+        </view>
+        <view class="nameBox">
+            <view class="btnBox"  wx:for="{{gameTitle}}" wx:key="b" bindtap="con" data-num="{{index+5}}" data-txt="{{item.link_title}}" >
+                <view class="red-btn">{{item.link_title}}</view>
+            </view>
+        </view>
+        <view class="conBox">
+            <i class="l1-r5" style="opacity:{{l1r5}}"></i>
+            <i class="l2-r6" style="opacity:{{l2r6}}"></i>
+            <i class="l3-r7" style="opacity:{{l3r7}}"></i>
+            <i class="l4-r8" style="opacity:{{l4r8}}"></i>
+            <i class="l1-r6" style="opacity:{{l1r6}}"></i>
+            <i class="l1-r7" style="opacity:{{l1r7}}"></i>
+            <i class="l1-r8" style="opacity:{{l1r8}}"></i>
+            <i class="l2-r5" style="opacity:{{l2r5}}"></i>
+            <i class="l2-r7" style="opacity:{{l2r7}}"></i>
+            <i class="l2-r8" style="opacity:{{l2r8}}"></i>
+            <i class="l3-r5" style="opacity:{{l3r5}}"></i>
+            <i class="l3-r6" style="opacity:{{l3r6}}"></i>
+            <i class="l3-r8" style="opacity:{{l3r8}}"></i>
+            <i class="l4-r5" style="opacity:{{l4r5}}"></i>
+            <i class="l4-r6" style="opacity:{{l4r6}}"></i>
+            <i class="l4-r7" style="opacity:{{l4r7}}"></i>
+        </view>
+    </view>
+    <!-- 游戏结束 -->
+    <view class="over" wx:elif="{{pageShow == 'over'}}">
+        <scoreMask bind:parentReceive="parentCallBack" score="{{score}}"></scoreMask>
+    </view>
+    <view class="sub" bindtap="sub">提交</view>
+    <!-- <view class="s">{{s}}</view> -->
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

@@ -1,0 +1,74 @@
+/* pages/rule/rule.wxss */
+.container{
+    min-height: 1333rpx;
+}
+.ruleBox {
+  width: 665rpx;
+  /* height: 763rpx; */
+  background-color: #fe1802;
+  box-shadow: 0rpx 29rpx 29rpx 7rpx rgba(0, 0, 0, 0.35);
+  border-radius: 21rpx;
+  margin: 0 auto;
+  padding: 22rpx;
+}
+.ruleBox .h2{
+	font-family: SourceHanSansCN-Heavy;
+	font-size: 43rpx;
+	line-height: 58rpx;
+	color: #fff003;
+    margin: 25rpx auto 25rpx auto;
+    text-align: center;
+}
+.ruleBox .ruleTxt {
+    margin: 11rpx 11rpx 33rpx 11rpx;
+    font-family: SourceHanSansCN-Medium;
+	font-size: 33rpx;
+	line-height: 58rpx;
+	color: #fcfbfd;
+}
+.ruleBox .ruleTxt .imgBox{
+    position: relative;
+    width: 63rpx;
+    height: 63rpx;
+    background-color: #343742;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 63rpx;
+    font-weight: bold;
+    font-family: SourceHanSansCN-Heavy;
+	font-size: 33rpx;
+    color: #ffffff;
+    display: inline-block;
+}
+.ruleBox .ruleTxt .imgBox i{
+    position: absolute;
+    top: -5rpx;
+    right: -5rpx;
+    width: 25rpx;
+	height: 25rpx;
+	background-color: #fef503;
+    border-radius: 50%;
+}
+.h1{
+	font-family: SourceHanSansCN-Heavy;
+	font-size: 65rpx;
+	letter-spacing: 5rpx;
+	color: #ff1a03;
+    margin: 0rpx auto 94rpx auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn{
+  width: 232rpx;
+  height: 63rpx;
+  background-image: linear-gradient(#fe1700, #fe1700), linear-gradient(#fe1802, #fe1802);
+  border-radius: 21rpx;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 43rpx;
+  letter-spacing: -3rpx;
+  color: #fffcfc;
+  text-align: center;
+  font-weight: bold;
+  margin: 103rpx auto 136rpx auto;
+}

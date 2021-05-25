@@ -1,0 +1,38 @@
+<!-- pages/bulletChat/bulletChat.wxml -->
+<view class="container">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <ruleMask bind:parentReceive="parentCallBack" txt="观看视频可以提交留言并生成弹幕。"></ruleMask>
+    <view class="title">
+        <p>{{gameName}}</p>
+        <image mode="widthFix" src="{{imagesUrl}}/img/bulletChat/icon-title.png" />
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game">
+        <view class="videoMask" bindtap="bindPlay" wx:if="{{videoPlay == false}}"></view>
+        <!-- <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video> -->
+
+        <video id="myVideo" src="{{videoSrc}}" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label red-btn">请输入弹幕：</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindblur="bindInputBlur" class="weui-input" bindinput="messageChang" value="{{myDanmu}}" type="text" placeholder="输入弹幕" placeholder-class="phcolor" />
+            </view>
+        </view>
+        <view class="btn-area" wx:if="{{pageShow == 'game'}}">
+            <view class="sub" bindtap="bindSendDanmu">提交</view>
+        </view>
+        <view class="btn" wx:if="{{pageShow == 'over'}}">
+            <button open-type="share">分享</button>
+            <button bindtap="starGame">下一关</button>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

@@ -1,0 +1,100 @@
+/* pages/personalCenter/personInfo/personInfo.wxss */
+.title {
+  text-align: center;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 43rpx;
+  font-weight: bold;
+  color: #ff1801;
+  margin: 0 auto;
+}
+.headBox {
+  width: 100%;
+  text-align: center;
+}
+.headBox .headImg {
+  width: 160rpx;
+  overflow: hidden;
+  display: inline-block;
+  margin: 53rpx auto 31rpx auto;
+}
+
+.list {
+  width: 750rpx;
+  height: 103rpx;
+  background-color: #ffffff;
+  box-shadow: 0rpx 2rpx 21rpx 2rpx rgba(0, 0, 0, 0.35);
+  border: solid 2rpx #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 4rpx;
+}
+.left,
+.right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  flex: 0.3;
+  justify-content: start;
+}
+.right {
+  flex: 0.7;
+  justify-content: flex-end;
+}
+.left image {
+  width: 27rpx;
+  height: 27rpx;
+  margin: 0 19rpx 0 38rpx;
+}
+.left text {
+  font-size: 27rpx;
+  color: #a3a3a3;
+}
+.right input {
+  text-align: right;
+  color: #ff1801;
+  font-size: 27rpx;
+  font-family: SourceHanSansCN-Medium;
+}
+.right image {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 38rpx 0 19rpx;
+}
+.right .section {
+  color: #cdcdcd;
+  font-size: 27rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.right .section picker {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.right .section .picker {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: right;
+  }
+.right .picker {
+  color: #ff1801;
+  font-size: 27rpx;
+  font-family: SourceHanSansCN-Medium;
+}
+.btn{
+    text-align: center;
+}
+.btn view{
+    margin: 33rpx 13.5rpx;
+}

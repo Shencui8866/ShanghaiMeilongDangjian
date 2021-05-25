@@ -1,0 +1,35 @@
+<!-- pages/personalCenter/shareCenter/shareCenter.wxml -->
+<view class="container">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <view class="titleBox">
+        <view class="title">
+            <view class="headImg">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <p>我的分享</p>
+        </view>
+    </view>
+    <view class="title2">
+        <view class="red-btn">项目名称</view>
+        <view class="red-btn">分享内容</view>
+    </view>
+    <view class="centerList">
+        <view class="tr" wx:for="{{gameInfo}}" wx:key="i">
+            <view class="red-btn">{{item.name}}</view>
+            <view class="red-btn" wx:if="{{item.classify_id==9||item.classify_id==7||item.classify_id==5}}" style="padding:0;">
+                <image mode="widthFix" src="{{item.info}}" />
+            </view>
+            <view class="red-btn" wx:elif="{{item.classify_id==6}}" style="padding:0;">
+                <audio poster="{{poster}}" src="{{item.info.mp3}}" controls ></audio>
+            </view>
+            <view class="red-btn" wx:else>
+                {{item.info}}
+            </view>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/faceChanging/faceChanging.wxml-->
+<view class="container minH">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <!-- <ruleMask bind:parentReceive="parentCallBack" txt="通过图片上传实现卡通变脸，并生成卡通海报分享。"></ruleMask> -->
+    <view class="title">
+        <p>卡通变脸</p>
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game" wx:if="{{pageShow==true}}">
+        <image mode="aspectFit" src="{{link_pic}}" />
+    </view>
+    <view class="games" wx:elif="{{pageShow==false}}">
+        <image mode="aspectFit" src="{{link_pic}}" bindlongpress="saveImage"/>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell_input" wx:if="{{pageShow == true}}">
+            <view class="weui-cell__hd">
+                <view class="weui-label red-btn">请选择头像：</view>
+            </view>
+            <view class="weui-cell__bd">
+                <image mode="aspectFit"  bindtap="chooseImg"  src="{{imgPath}}" />
+            </view>
+        </view>
+        <view class="btn-area" wx:if="{{pageShow == true}}">
+            <view class="sub" bindtap="bindSendDanmu">提交</view>
+        </view>
+        <view class="btn" wx:if="{{pageShow == false}}">
+            <button open-type="share">分享</button>
+            <button bindtap="starGame">下一关</button>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

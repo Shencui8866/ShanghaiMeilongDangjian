@@ -1,0 +1,9 @@
+<!-- components/ruleMask/ruleMask.wxml -->
+<view class="mask" wx:if="{{mask==true}}" >
+    <view class="Box">
+        <image class="bg"  src="{{imagesUrl}}/img/public/bg-rule.png" />
+        <view class="title">游戏规则</view>
+        <view class="txt">{{txt}}</view>
+        <view class="btn" bindtap="btnHide">开始游戏</view>
+    </view>
+</view>

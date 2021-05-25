@@ -1,0 +1,83 @@
+<!-- pages/personalCenter/personInfo/personInfo.wxml -->
+<view class="container">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <view class="title">
+        <text>个人资料</text>
+    </view>
+    <view class="headBox">
+        <view class="headImg">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+    </view>
+    <view class="infoBox">
+        <view class="list">
+            <view class="left">
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-nickName.png" />
+                <text>昵称</text>
+            </view>
+            <view class="right">
+                <input type="text" value="ABC123" placeholder="" />
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-arrow-gary.png" />
+            </view>
+        </view>
+        <view class="list">
+            <view class="left">
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-sex.png" />
+                <text>性别</text>
+            </view>
+            <view class="right">
+                <view class="section">
+                    <picker bindchange="bindPickerChangeSex" value="{{index}}" range="{{sex}}">
+                        <view class="picker">{{sex[index]}}</view>
+                    </picker>
+                    <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-arrow-gary.png" />
+                </view>
+            </view>
+        </view>
+        <view class="list">
+            <view class="left">
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-day.png" />
+                <text>出生年月</text>
+            </view>
+            <view class="right">
+                <view class="section">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                        <view class="picker">{{date}}</view>
+                    </picker>
+                    <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-arrow-gary.png" />
+                </view>
+            </view>
+        </view>
+        <view class="list">
+            <view class="left">
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-addres.png" />
+                <text>所在地</text>
+            </view>
+            <view class="right">
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="picker">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+                </picker>
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-arrow-gary.png" />
+            </view>
+        </view>
+        <view class="list">
+            <view class="left">
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-txt.png" />
+                <text>座右铭</text>
+            </view>
+            <view class="right">
+                <input type="text" bindinput="messageChang" value="{{txts}}" placeholder="" />
+                <image mode="widthFix" src="{{imagesUrl}}/img/personalCenter/icon-arrow-gary.png" />
+            </view>
+        </view>
+    </view>
+    <view class="btn">
+        <view class="red-btn" bindtap="goBack">取消</view>
+        <view class="red-btn" bindtap="sub">确定</view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

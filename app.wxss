@@ -1,0 +1,140 @@
+/**app.wxss**/
+page{
+  --resources-url-:"../public/";
+  height: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+	/* min-height: 1333rpx; */
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid transparent;/* 解决外边距塌陷 */
+} 
+.minH{
+  min-height: 1333rpx;
+}
+
+/* 
+@font-face {
+  font-family: 'siyuanM';
+  src: url('http://file.shencui1979.com/public/font/SourceHanSansCN-Medium.otf');
+}
+
+@font-face {
+  font-family: 'siyuanR';
+  src: url('http://file.shencui1979.com/public/font/SourceHanSansCN-Regular.otf');
+}
+
+@font-face {
+  font-family: 'siyuanB';
+  src: url('http://file.shencui1979.com/public/font/SourceHanSansCN-Bold.otf');
+}
+
+@font-face {
+  font-family: 'ruizi';
+  src: url('http://file.shencui1979.com/public/font/锐字真言体免费试用授权.ttf');
+}
+
+@font-face {
+  font-family: 'yuanrou';
+  src: url('http://file.shencui1979.com/public/font/源柔ゴシック-Bold(GenJyuuGothic-Bold).ttf');
+} */
+.goBack{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 18rpx 22rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goBack image{
+  width: 22rpx;
+  height: 38rpx;
+}
+.txtBg{
+  width: 123rpx;
+	height: 62rpx;
+  margin: 14rpx 14rpx;
+  position: absolute;
+  bottom: 14rpx;
+  right: 14rpx;
+}
+.txtBg image{
+  width: 100%;
+	height: 100%;
+}
+
+/* 按钮红色 */
+.red-btn{
+  width: 232rpx;
+	height: 63rpx;
+	background-color: #fe1802;
+  border-radius: 21rpx;
+  font-family: SourceHanSansCN-Heavy;
+	font-size: 43rpx;
+  color: #fdfbfb;
+  text-align: center;
+  display: inline-block;
+}
+/* 标题 */
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+.title p {
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 65rpx;
+  font-weight: bold;
+  letter-spacing: -3rpx;
+  color: #fe1801;
+}
+.title image {
+  width: 116rpx;
+  height: 89rpx;
+  margin: 47rpx auto 74rpx auto;
+  object-fit: contain;
+}
+/* 提交 */
+.sub{
+  width: 232rpx;
+  height: 63rpx;
+  background-color: #fe1802;
+  border-radius: 21rpx;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 43rpx;
+  line-height: 58rpx;
+  color: #fefcfc;
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  bottom: 168rpx;
+  text-align: center;
+  transform: translateX(-50%);
+}
+/* 读秒 */
+.s{
+  width: 80rpx;
+  height: 80rpx;
+  border: solid 9rpx #fe1802;
+  font-family: GenJyuuGothic-Bold;
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 58rpx;
+  color: #fe1700;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 42rpx;
+  text-align: center;
+  transform: translateX(-50%);
+}

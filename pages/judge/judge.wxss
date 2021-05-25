@@ -1,0 +1,230 @@
+/* pages/judge/judge.wxss */
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title p {
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 65rpx;
+  font-weight: bold;
+  letter-spacing: -3rpx;
+  color: #fe1801;
+}
+.title image {
+  width: 96rpx;
+  height: 96rpx;
+}
+.card,
+.grade {
+  box-sizing: border-box;
+  position: relative;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  width: 534rpx;
+  height: 667rpx;
+}
+.card image,
+.grade image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.card .topic,
+.card .txt {
+  margin: 0 60rpx;
+}
+.card .topic {
+  text-align: right;
+  margin: 53rpx 69rpx 0 69rpx;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 22rpx;
+  letter-spacing: 1rpx;
+  color: #be5f59;
+}
+.card .txt {
+  font-family: SourceHanSansCN-Medium;
+  font-size: 29rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  color: #fe1902;
+  text-align: center;
+  margin-top: 40rpx;
+  word-wrap: break-word;
+  word-break: normal;
+}
+.judeg {
+  width: 368rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60rpx auto 0 auto;
+}
+.radio-box {
+  display: inline-block;
+  position: relative;
+  font-size: 52rpx;
+  color: #ff1702;
+  /* width: 30%; */
+}
+.radio-box p{
+  color: #ff1702 !important;
+}
+.input-radio {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  outline: none;
+  -webkit-appearance: none;
+}
+.radio {
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 45rpx;
+  height: 45rpx;
+  background-color: #f9f237;
+  margin-left: 30rpx;
+}
+.on {
+  width: 31rpx;
+  height: 31rpx;
+  background-color: #fe1802;
+  border: 4px solid #f9f237;
+}
+.red-btn {
+  width: 433rpx;
+  height: 71rpx;
+  box-shadow: 0rpx 9rpx 27rpx 0rpx rgba(42, 112, 255, 0.5);
+  border-radius: 34rpx;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 33rpx;
+  font-weight: bold;
+  line-height: 71rpx;
+  letter-spacing: 3rpx;
+  color: #ffffff;
+  margin: 60rpx 50.5rpx;
+}
+.sub {
+  width: 232rpx;
+  height: 63rpx;
+  background-color: #fe1802;
+  border-radius: 21rpx;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 43rpx;
+  line-height: 58rpx;
+  color: #fefcfc;
+  position: absolute;
+  left: 50%;
+  bottom: 168rpx;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.s {
+  width: 80rpx;
+  height: 80rpx;
+  border: solid 9rpx #fe1802;
+  font-family: GenJyuuGothic-Bold;
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 58rpx;
+  color: #fe1700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 42rpx;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.over {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.grade {
+  width: 603rpx;
+  height: 707rpx;
+}
+.grade image {
+  width: 100%;
+  height: 100%;
+}
+.grade .titles {
+  font-family: SourceHanSansCN-Bold;
+  font-size: 45rpx;
+  letter-spacing: -2rpx;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 53rpx;
+}
+.grade .score {
+  font-family: SourceHanSansCN-Regular;
+  font-size: 136rpx;
+  letter-spacing: -7rpx;
+  color: #fdee01;
+  text-align: center;
+  margin: 0 auto;
+}
+.gameType {
+  width: 90%;
+  height: 103rpx;
+  margin: 38rpx auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameType text {
+  font-size: 28px;
+  font-family: "yuanrou";
+  display: block;
+  font-size: 43rpx;
+  color: #fbfafa;
+}
+.btn {
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn button {
+  border: 0;
+  border-radius: 50rpx;
+  width: 200rpx;
+  height: 51rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 45rpx;
+  letter-spacing: -4rpx;
+  color: #fe1801;
+  font-weight: bold;
+  -webkit-border-radius: 50rpx;
+  -moz-border-radius: 50rpx;
+  -ms-border-radius: 50rpx;
+  -o-border-radius: 50rpx;
+}

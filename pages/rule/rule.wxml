@@ -1,0 +1,43 @@
+<!-- pages/rule/rule.wxml -->
+<view class="container">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <view class="h1">规则</view>
+    <view class="ruleBox">
+        <view class="h2">规则</view>
+        <view class="ruleTxt">
+            <view class="imgBox">
+                <text>1</text>
+                <i></i>
+            </view>
+            游戏分为答题，益智，线上打卡，现场
+            打卡四类游戏，每一类中有两到三个小游戏，
+            让大家进行体验！
+        </view>
+        <view class="ruleTxt">
+            <view class="imgBox">
+                <text>2</text>
+                <i></i>
+            </view>
+            每关有每关的独立分数，规定时间里按
+            照积分情况来计算成绩。（比如连连看，
+            在规定的一分钟内，消灭一组3个是10分，
+            消灭十组就是100分。）
+        </view>
+        <view class="ruleTxt">
+            <view class="imgBox">
+                <text>3</text>
+                <i></i>
+            </view>
+            小程序一共100关，每关分数累计，闯
+            完为止。排名按照总积分来统计！
+        </view>
+    </view>
+    <view class="btn"  bindtap="star">
+        知道了
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

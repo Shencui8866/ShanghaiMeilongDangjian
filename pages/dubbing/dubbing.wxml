@@ -1,0 +1,40 @@
+<!-- pages/dubbing/dubbing.wxml -->
+<view class="container">
+    <van-notify id="van-notify" />
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <ruleMask bind:parentReceive="parentCallBack" txt="观看短视频，并给视频进行配音，从而生成完整小视频进行分享。"></ruleMask>
+    <view class="title">
+        <p>视频配音</p>
+        <image mode="widthFix" src="{{imagesUrl}}/img/dubbing/icon-title.png" />
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game" wx:if="{{pageShow==true}}">
+        <video id="myVideo" src="{{videoSrc}}"></video>
+    </view>
+    <view class="game" wx:elif="{{pageShow==false}}">
+        <view class="videoMask" wx:if="{{maskMp3}}" bindtap="playMp3"></view>
+        <video id="myVideo2" muted="{{false}}" src="{{videoSrc}}"></video>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell_input" wx:if="{{pageShow == true}}">
+            <view class="weui-cell__hd">
+                <view class="weui-label red-btn">点击图标进行配音：</view>
+            </view>
+            <view class="weui-cell__bd" bindtouchstart="recordStart" bindtouchend="recordTerm">
+                <image mode="widthFix" src="{{imagesUrl}}/img/dubbing/icon-dubbing.png" />
+            </view>
+        </view>
+        <view class="btn-area" wx:if="{{pageShow == true}}">
+            <view class="sub" bindtap="bindSendDanmu">提交</view>
+        </view>
+        <view class="btn" wx:if="{{pageShow == false}}">
+            <button open-type="share">分享</button>
+            <button bindtap="starGame">下一关</button>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

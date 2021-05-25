@@ -1,0 +1,38 @@
+<!--pages/message/message.wxml-->
+<view class="container minH">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <ruleMask bind:parentReceive="parentCallBack" txt="用户可以对图片进行留言，并生成留言海报进行分享。"></ruleMask>
+    <view class="title" wx:if="{{videoPlay == true}}">
+        <p>{{gameName}}</p>
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game" wx:if="{{videoPlay == true}}">
+        <image mode="widthFix" src="{{imgSrc}}"/>
+    </view>
+    <view class="games" wx:if="{{videoPlay == false}}">
+        <image mode="widthFix" src="{{imgSrc2}}" bindlongpress="saveImage" />
+        <!-- <p>{{myDanmu}}</p> -->
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell_input" wx:if="{{videoPlay == true}}">
+            <view class="weui-cell__hd">
+                <view class="weui-label red-btn">请输入留言：</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input bindblur="bindInputBlur" class="weui-input" bindinput="messageChang" value="{{myDanmu}}" type="text" placeholder="输入留言" placeholder-class="phcolor" />
+            </view>
+        </view>
+        <view class="btn-area" wx:if="{{pageShow == 'game'}}">
+            <view class="sub" bindtap="bindSendDanmu">提交</view>
+        </view>
+        <view class="btn" wx:if="{{pageShow == 'over'}}">
+            <button open-type="share">分享</button>
+            <button bindtap="starGame">下一关</button>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

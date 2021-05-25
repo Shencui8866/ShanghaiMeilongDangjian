@@ -1,0 +1,13 @@
+<!-- components/loading/loading.wxml -->
+<view class="mask" wx:if="{{loading==true}}">
+    <view class="loadEffect">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </view>
+</view>

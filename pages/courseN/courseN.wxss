@@ -1,0 +1,21 @@
+.back {
+  position: absolute;
+  left: 24rpx;
+  top: 20rpx;
+}
+
+.back image{
+  width: 30rpx;
+  height: 48rpx;
+}
+
+.back2 {
+  position: absolute;
+  left: 24rpx;
+  bottom: 0;
+}
+
+.back2 image{
+  width: 166rpx;
+  height: 110rpx;
+}

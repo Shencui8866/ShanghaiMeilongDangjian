@@ -1,0 +1,35 @@
+<!-- pages/location/location.wxml -->
+<view class="container minH">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <!-- <ruleMask bind:parentReceive="parentCallBack" txt="根据文字定位相应地点，在坐标周围500米内进行定位打卡。"></ruleMask> -->
+    <view class="title">
+        <p>{{gameName}}</p>
+        <image mode="aspectFit" src="{{imagesUrl}}/img/location/icon-title.png" />
+    </view>
+    <view class="locaName">{{addres}}</view>
+    <!-- 游戏内容 -->
+    <view class="game">
+        <map id="myMap" style="width: 100%; height: 100%;" latitude="{{latitude}}" circles="{{circles}}" longitude="{{longitude}}" markers="{{markers}}" covers="{{covers}}" show-location></map>
+    </view>
+    <view wx:if="{{pageShow == false}}">
+        <scoreMask bind:parentReceive="parentCallBack" score="{{score}}"></scoreMask>
+    </view>
+    <view class="weui-cells">
+        <view class="weui-cell_input" wx:if="{{pageShow == true}}">
+            <view class="weui-cell__hd">
+                <view class="weui-label red-btn">请点击定位：</view>
+            </view>
+            <view class="weui-cell__bd" bindtap="moveToLocation">
+                <image mode="aspectFit" src="{{imagesUrl}}/img/location/icon-position.png" />
+            </view>
+        </view>
+        <view class="btn-area" wx:if="{{pageShow == true}}">
+            <view class="sub" bindtap="getCenterLocation">提交</view>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

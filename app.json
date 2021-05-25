@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/rule/rule",
+    "pages/AR/AR",
+    "pages/judge/judge",
+    "pages/puzzle/puzzle",
+    "pages/message/message",
+    "pages/dubbing/dubbing",
+    "pages/location/location",
+    "pages/imgUpload/imgUpload",
+    "pages/bulletChat/bulletChat",
+    "pages/connection/connection",
+    "pages/faceChanging/faceChanging",
+    "pages/personalCenter/personInfo/personInfo",
+    "pages/personalCenter/myWechat/myWechat",
+    "pages/personalCenter/personalCenter",
+    "pages/personalCenter/vsCenter/vsCenter",
+    "pages/personalCenter/shareCenter/shareCenter",
+    "pages/timeN/timeN",
+    "pages/courseN/courseN"
+  ],
+  "usingComponents": {
+    "ruleMask": "components/ruleMask/ruleMask",
+    "scoreMask": "components/scoreMask/scoreMask",
+    "van-notify": "@vant/weapp/notify/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中庚互动",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

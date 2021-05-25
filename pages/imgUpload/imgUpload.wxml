@@ -1,0 +1,34 @@
+<!-- pages/imgUpload/imgUpload.wxml -->
+<view class="container minH">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <ruleMask bind:parentReceive="parentCallBack" txt="上传照片实现照片打卡，并可以分享海报。"></ruleMask>
+    <view class="title" wx:if="{{videoPlay == true}}">
+        <p>图片留言</p>
+        <image mode="widthFix" src="{{imagesUrl}}/img/imgUpload/icon-title.png" />
+    </view>
+    <view class="title" wx:if="{{videoPlay == false}}">
+        <p>庆祝祖国建党100周年</p>
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game" wx:if="{{videoPlay == true}}">
+        <image mode="widthFix" bindtap="chooseImg" src="{{imgPath}}"/>
+    </view>
+    <view class="games" wx:if="{{videoPlay == false}}">
+        <image src="{{imagesUrl}}/img/imgUpload/bg.png" />
+        <image mode="widthFix" src="{{imgPath}}"  bindlongpress="saveImage"/>
+    </view>
+    <view class="weui-cells">
+        <view class="btn-area" wx:if="{{pageShow == 'game'}}">
+            <view class="sub" bindtap="bindSendDanmu">提交</view>
+        </view>
+        <view class="btn" wx:if="{{pageShow == 'over'}}">
+            <button open-type="share">分享</button>
+            <button bindtap="starGame">下一关</button>
+        </view>
+    </view>
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

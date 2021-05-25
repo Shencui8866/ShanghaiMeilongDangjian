@@ -1,0 +1,92 @@
+/* pages/bulletChat/bulletChat.wxss */
+.container{
+  overflow: hidden;
+}
+.button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.game {
+  width: 649rpx;
+  height: 364rpx;
+  margin: 0 auto;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.weui-cells {
+  width: 649rpx;
+  margin: 105rpx auto;
+}
+.weui-cell_input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weui-input {
+  width: 379rpx;
+  height: 63rpx;
+  background-color: #fe1802;
+  border-radius: 21rpx;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 29rpx;
+  line-height: 58rpx;
+  color: #fdfafa;
+  float: left;
+  padding-left: 22rpx;
+}
+.weui-label {
+  width: 232rpx;
+  height: 63rpx;
+  font-size: 29rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phcolor {
+  color: #ffffff;
+}
+.btn {
+    width: 649rpx;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  bottom: 168rpx;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.btn button {
+  border: 0;
+  width: 232rpx;
+  height: 63rpx;
+  border-radius: 21rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 45rpx;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #fe1801;
+  -webkit-border-radius: 20rpx;
+  -moz-border-radius: 20rpx;
+  -ms-border-radius: 20rpx;
+  -o-border-radius: 20rpx;
+}
+.videoMask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    z-index: 5;
+}

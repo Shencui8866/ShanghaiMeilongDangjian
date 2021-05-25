@@ -1,0 +1,9 @@
+<view class="container">
+  <image src="/public/img/timeN/02.png" style="width: 100%;height: 100%"></image>
+  <view class="back" bindtap="back">
+    <image src="/public/img/timeN/back.png"></image>
+  </view>
+  <view class="next" bindtap="next">
+    <image src="/public/img/timeN/next.png"></image>
+  </view>
+</view>

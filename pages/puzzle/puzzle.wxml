@@ -1,0 +1,33 @@
+<!-- pages/puzzle/puzzle.wxml -->
+<view class="container minH">
+    <view class="goBack" bindtap="goBack">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-arrow.png" />
+    </view>
+    <!-- <ruleMask bind:parentReceive="parentCallBack" txt="点亮拼图是根据所给图片，在下方寻找拼图碎片，选择全部正确碎片，则可点亮该图片，获得胜利。"></ruleMask> -->
+    <view class="title">
+        <p>{{gameName}}</p>
+    </view>
+    <!-- 游戏内容 -->
+    <view class="game">
+        <view wx:for="{{mapFilter}}" wx:key="i" class="map{{index+1}} map">
+            <image style="filter:{{item.filter}};" src="{{item.link_pic}}" />
+        </view>
+    </view>
+    <p class="tic">根据上图选择正确的拼图点亮图片</p>
+    <view class="logList">
+        <view wx:for="{{logList}}" wx:key="k" class="imgBox">
+            <image bindtap="bright" data-index="{{index}}" data-imgId="{{item.id}}" src="{{item.link_pic}}" />
+            <image bindtap="bright" data-index="{{index}}" data-imgId="{{item.id}}" mode="widthFix" style="opacity: {{item.opacity}};" src="{{item.num<6?imagesUrl+'/img/puzzle/type1.png':imagesUrl+'/img/puzzle/type2.png'}}" />
+        </view>
+    </view>
+    <p class="tic2">只有5次机会，选择正确点亮图片获得2分，满分10分。</p>
+    <!-- 游戏结束 -->
+    <view class="over" wx:if="{{pageShow == 'over'}}">
+        <scoreMask bind:parentReceive="parentCallBack" score="{{score}}"></scoreMask>
+    </view>
+    <view class="sub" bindtap="sub">提交</view>
+    <!-- <view class="s">{{s}}</view> -->
+    <view class="txtBg">
+        <image mode="widthFix" src="{{imagesUrl}}/img/public/icon-bg.png" />
+    </view>
+</view>

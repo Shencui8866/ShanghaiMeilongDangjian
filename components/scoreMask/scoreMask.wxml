@@ -1,0 +1,12 @@
+<!--components/scoreMask/scoreMask.wxml-->
+<view class="mask">
+<view class="grade">
+	<image class="img" src="{{imagesUrl}}/img/public/bg-rule.png" />
+	<view class="titles">本轮得分</view>
+	<view class="score">{{score}}分</view>
+	<view class="btn">
+		<button class="btns" open-type="share">分享</button>
+		<button class="btns" bindtap="starGame">下一关</button>
+	</view>
+</view>
+</view>

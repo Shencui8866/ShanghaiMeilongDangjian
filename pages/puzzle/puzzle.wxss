@@ -1,0 +1,130 @@
+/* pages/puzzle/puzzle.wxss */
+.game {
+  width: 600rpx;
+  height: 400rpx;
+  margin: 29rpx auto 0 auto;
+}
+.map1,.map2{
+  width: 300rpx;
+  height: 200rpx;
+}
+.map3,.map4,.map5{
+  width: 200rpx;
+  height: 200rpx;
+}
+.map{
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+.map image{
+  /* width: 600rpx;
+  height: 400rpx; */
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  /* position: absolute; */
+  transition: all .8s;
+}
+/* .map1 image{
+  top: 0;
+  left: 0;
+}
+.map2 image{
+  top: 0;
+  right: 0;
+}
+.map3 image{
+  bottom: 0;
+  left: 0;
+}
+.map4 image{
+  bottom: 0;
+  left: -50%;
+}
+.map5 image{
+  bottom: 0;
+  right: 0;
+} */
+.over {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.btn {
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn button {
+  border: 0;
+  border-radius: 50rpx;
+  width: 200rpx;
+  height: 51rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: SourceHanSansCN-Heavy;
+  font-size: 45rpx;
+  letter-spacing: -4rpx;
+  color: #fe1801;
+  font-weight: bold;
+}
+.logList{
+  width: 650rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap ;
+  margin: 0 auto;
+}
+.logList  .imgBox {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 8rpx;
+  overflow: hidden;
+  position: relative;
+}
+.logList  .imgBox image:nth-child(1) {
+  width: 140rpx;
+  height: 140rpx;
+}
+.logList  .imgBox image:nth-child(2) {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: all .8s;
+}
+.tic{
+  margin: 15rpx auto;
+  text-align: center;
+  font-family: SourceHanSansCN-Medium;
+	font-size: 30rpx;
+	letter-spacing: 2rpx;
+  color: #fe1902;
+  display: block;
+}
+.tic2{
+  margin: 15rpx auto;
+  text-align: center;
+  font-family: SourceHanSansCN-Medium;
+	font-size: 26rpx;
+	letter-spacing: 1rpx;
+	color: #fe1902;
+  display: block;
+}
